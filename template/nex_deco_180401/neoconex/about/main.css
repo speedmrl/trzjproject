@@ -1,0 +1,120 @@
+@charset "utf-8";
+/*
+模板版权所有归星点互联（Neoconex）所有，请尊重版权与原创；
+任何模板使用问题，请联络QQ：1691000615 寻求解决。
+版本：vision1.0
+*/
+body{ background:#fff!important;}
+.wp,#wp{ width:1180px!important;}
+.nexabtbd{}
+.nex_ab_top{ width:236px; float:left;background:#fff; border:1px solid #eee;}
+.nex_ab_top ul{}
+.nex_ab_top ul li{display: block; font-size: 16px; color: #333; border-bottom:1px solid #eee; line-height: 50px; width: 236px; height: 50px;text-align: center; cursor:pointer;}
+.nex_lastlistli{ border-bottom:0!important;}
+.nex_ab_top ul li.cur{ color:#fff; background:#FF9900}
+
+
+.nex_ab_main{ position:relative; float:right; width:924px;border:1px solid #eee;}
+.nex_ab_bottom{}
+.nex_ab_bottom ul li{ display:none;}
+.nex_topbards{ height:200px; width:924px; background:url(bg1.jpg) center no-repeat; position:relative; }
+.nex_main_box{ }
+.nex_aboutusbx{ border-radius: 4px; width: 864px; background: #fff; overflow: hidden; position: relative; z-index:3;  padding:30px;}
+.nex_about_title{}
+.nex_about_title h1{border-left: 6px solid #FF9900; padding-left:12px; font-size: 18px; color:#333; font-weight:500;height: 20px; line-height:20px; margin-bottom:20px;}
+
+
+.nex_ab_line_txt{ line-height:30px; font-size:16px; color:#666; margin-bottom:25px;}
+.nex_ab_line_txt a{ color:32b6ff; text-decoration:underline;}
+.nex_pivgfhd{ margin-bottom:30px;}
+.nex_pivgfhd_l{ width:260px; height:380px; float:left; background:url(s1.jpg) center no-repeat; position:relative;}
+.nex_pivgfhd_linter{ width:160px; height:220px; padding:20px; position:absolute; top:60px; left:30px; background:rgba(255,255,255,0.6);}
+.nex_pivgfhd_linter h5{ height:40px; line-height:40px; font-size:20px; color:#000; overflow:hidden; text-align:center;}
+.nex_pivgfhd_linter p{ height:20px; line-height:20px; font-size:16px; color:#333;overflow:hidden; text-align:center; margin:5px 0 10px 0;}
+.nex_pivgfhd_linter i{ display:block; width:42px; height:7px; background:url(wave-line.png) center no-repeat; margin:15px auto 20px;}
+.nex_pivgfhd_linter em{ display:block; height:20px; line-height:20px; margin-bottom:5px; overflow:hidden; font-size:14px; color:#333; overflow:hidden;}
+.nex_pivgfhd_linter em.nex_pivgfhdline{ text-align:center;}
+.nex_pivgfhd_linter span{ display:block; width:160px; height:30px; line-height:30px; background:#FF9900; font-size:14px; color:#fff; text-align:center; margin:20px auto 0;}
+.nex_pivgfhd_r{ float:right; width:589px;}
+.nex_pivgfhd_rtop{}
+.nex_pivgfhd_rtop dl{ width:605px;}
+.nex_pivgfhd_rtop dl dd{ float:left; margin:0 15px 15px 0;}
+.nex_pivgfhd_rbig{ width:391.5px; height:182.5px; position:relative; overflow:hidden; background:url(s2.jpg) center no-repeat;}
+.nex_pivgfhd_rbig em{ display:block; width:40px; padding:10px; height:40px; background:#FF9900; border-radius:100%; position:absolute; top:15px; right:15px; font-size:12px; color:#fff; text-align:center; line-height:20px; overflow:hidden;}
+.nex_pivgfhd_rbiginter{ width:150px; height:60px; position:absolute; bottom:15px; left:15px;}
+.nex_pivgfhd_rbiginter h5{ height:30px; line-height:30px; text-align:center; overflow:hidden; font-size:24px; color:#fff; font-weight:400; margin-bottom:10px; text-shadow:0 2px 4px #000;}
+.nex_pivgfhd_rbiginter p{ height:20px; line-height:20px; background:#333; font-size:12px; color:#fff;max-width:130px; text-align:center; padding:0 10px; overflow:hidden;}
+.nex_pivgfhd_rsmall{width:182.5px;height:182.5px;background:url(s3.jpg) center no-repeat; position:relative; overflow:hidden;}
+.nex_pivgfhd_rsmallin{width:142.5px;height:102.5px; padding:40px 20px; background:rgba(0,0,0,0.5); position:absolute;top:0;left:0;}
+.nex_pivgfhd_rsmallin h5{ height:40px; line-height:40px; text-align:center; border-bottom:1px solid #eee; padding-bottom:10px; margin-bottom:10px; font-size:22px; color:#fff; overflow:hidden;}
+.nex_pivgfhd_rsmallin p{height:20px; line-height:20px; text-align:center;font-size:14px; color:#fff; overflow:hidden;}
+.nex_pivgfhd_rbtm dl{ width:605px;}
+.nex_pivgfhd_rbtm dl dd{ float:left; margin:0 15px 15px 0;}
+.nex_pivgfhd_rsmalll{ background:url(s4.jpg) center no-repeat!important;}
+.nex_pivgfhd_rbigr{ float:right!important;background:url(s5.jpg) center no-repeat!important;}
+
+
+
+
+.nex_topbards1{background:url(bg2.jpg) center no-repeat;}
+.nex_topbards1 h5{ padding-top:170px;}
+.nex_develops{ width:864px; margin:40px auto 10px auto;}
+.nex_progress_item{}
+.nex_progress_item_time{ position: relative; width:100px; height: 110px; font-size: 16px; color: #616161; line-height: 1.5; float: left;}
+.nex_progress_item_time em{ display:block; width:66px; height:20px; position:absolute; top:0; left:0;color: #999; }
+.nex_progress_item_time span{ display: inline-block; width: 8px; height: 8px; margin-left: 80px; margin-top:3px; background-color: #FF9900; line-height: 12px; border: 3px solid #ffffff; border-radius: 50%; -webkit-box-shadow: 0 0 0 1px #ddd; -moz-box-shadow: 0 0 0 1px #ddd; box-shadow: 0 0 0 1px #ddd;}
+.nex_progress_item_time span i { display:block;position: absolute; right: 11px; top: 40px; bottom: 20px; width: 1px; background: #ededed;}
+.nex_progress_item_content{ margin-left: 110px; height: 110px;}
+.nex_progress_item_content p{ line-height:20px; font-size:16px; color:#666;}
+.nex_develops dl dd:last-child .nex_progress_item_time span i{ background: #fff;}
+
+.nex_topbards2{background:url(bg3.jpg) center no-repeat;}
+.nex_topbards2 h5{ padding-top:170px;}
+
+.nex_topbards3{background:url(bg4.jpg) center no-repeat;}
+.nex_topbards3 h5{ padding-top:170px;}
+.nex_corpnews{}
+.nex_corpnews dl dd{ margin-bottom:15px; padding-bottom:15px; border-bottom:1px dashed #eee;}
+.nex_corpnews dl dd:last-child{ margin-bottom:0; padding-bottom:0; border-bottom:0;}
+.nex_corpnewsimg{ float:left; width:190px; height:110px;}
+.nex_corpnewsimg img{width:190px; height:110px;}
+.nex_corpnewsinfo{ float:right; width:655px;}
+.nex_corpnewsinfo h5{ height:25px; line-height:25px; overflow:hidden; margin-bottom:10px;}
+.nex_corpnewsinfo h5 a{ font-size:16px; color:#333; font-weight:400;}
+.nex_corpnewsinfo h5 a:hover{ color:#FF9900;}
+.nex_corpnewsinfo p{ height:44px; line-height:22px; font-size:12px; color:#666; overflow:hidden; margin-bottom:10px;}
+.nex_corpnewsinfobh{ height:20px; inline-box-align:20px; font-size:12px; color:#999; overflow:hidden;}
+.nex_corpnewsinfobh em{ padding:0 10px;}
+
+.nex_topbards4{background:url(bg5.jpg) center no-repeat;}
+.nex_topbards4 h5{ padding-top:170px;}
+
+.nex_main_box{ width:1140px;}
+
+.nex_jobtab{ margin-bottom:30px;}
+.nex_jobtab dl{ display:table; margin:15px auto 5px auto; width:884px;}
+.nex_jobtab dl dd{ width:199px; height:45px; line-height:45px; float:left; margin:0 20px 0 0; font-size:14px; color:#aaa; text-align:center; border:1px solid #ededed; cursor:pointer;}
+.nex_jobtab dl dd.nex_cur{ background:#fcfcfc; color:#666;}
+.nex_jobcontant{}
+.nex_jobcontant dl dd{ display:none;}
+.nex_jobzz{ height:30px; line-height:30px; font-size:16px; color:#333; font-weight:500; letter-spacing:2px; margin-top:30px; margin-bottom:10px;}
+.nex_jobcontant dl dd p{ height:35px; line-height:35px; font-size:14px; color:#666; overflow:hidden;}
+
+
+
+
+
+
+.nex_abcontact{}
+
+
+
+.nex_contactslists{}
+.nex_maps{ float:left; width:395px; height:322px; padding:3px; border:1px solid #ededed;}
+.nex_maps img{ width:395px;height:322px;}
+.nex_colits{ float:right; width:440px;}
+.nex_colits h5{ height:30px; line-height:30px; font-size:24px; color:#333; font-weight:400; margin-bottom:20px;}
+.nex_colits dl dd{ height:35px; line-height:35px; font-size:16px; color:#666; border-bottom:1px dashed #ededed;}
+.nex_colits dl dd:last-child{ border-bottom:0;}
+.nex_colits dl dd span{ color:#999; margin-right:10px;}
+.nex_colits dl dd span em{ margin-left:5px; color:32b6ff; font-size:12px;}

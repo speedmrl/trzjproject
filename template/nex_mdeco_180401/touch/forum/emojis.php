@@ -1,0 +1,25 @@
+<?php echo 'Copyright@Neoconex星点互联';exit;?>
+<span><img src="static/image/smiley/grapeman/01.gif" width="30" height="30" onClick="addface('needmessage', '{:3_41:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/02.gif" width="30" height="30" onClick="addface('needmessage', '{:3_42:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/03.gif" width="30" height="30" onClick="addface('needmessage', '{:3_43:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/04.gif" width="30" height="30" onClick="addface('needmessage', '{:3_44:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/05.gif" width="30" height="30" onClick="addface('needmessage', '{:3_45:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/06.gif" width="30" height="30" onClick="addface('needmessage', '{:3_46:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/07.gif" width="30" height="30" onClick="addface('needmessage', '{:3_47:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/08.gif" width="30" height="30" onClick="addface('needmessage', '{:3_48:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/09.gif" width="30" height="30" onClick="addface('needmessage', '{:3_49:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/10.gif" width="30" height="30" onClick="addface('needmessage', '{:3_50:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/11.gif" width="30" height="30" onClick="addface('needmessage', '{:3_51:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/12.gif" width="30" height="30" onClick="addface('needmessage', '{:3_52:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/13.gif" width="30" height="30" onClick="addface('needmessage', '{:3_53:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/14.gif" width="30" height="30" onClick="addface('needmessage', '{:3_54:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/15.gif" width="30" height="30" onClick="addface('needmessage', '{:3_55:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/16.gif" width="30" height="30" onClick="addface('needmessage', '{:3_56:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/17.gif" width="30" height="30" onClick="addface('needmessage', '{:3_57:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/18.gif" width="30" height="30" onClick="addface('needmessage', '{:3_58:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/19.gif" width="30" height="30" onClick="addface('needmessage', '{:3_59:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/20.gif" width="30" height="30" onClick="addface('needmessage', '{:3_60:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/21.gif" width="30" height="30" onClick="addface('needmessage', '{:3_61:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/22.gif" width="30" height="30" onClick="addface('needmessage', '{:3_62:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/23.gif" width="30" height="30" onClick="addface('needmessage', '{:3_63:}')" /></span>
+                <span><img src="static/image/smiley/grapeman/24.gif" width="30" height="30" onClick="addface('needmessage', '{:3_64:}')" /></span>

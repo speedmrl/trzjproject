@@ -1,0 +1,375 @@
+<!--{template common/header}-->
+
+<script type="text/javascript" src="{$_G['setting']['jspath']}forum_viewthread.js?{VERHASH}"></script>
+<script type="text/javascript">zoomstatus = parseInt($_G['setting']['zoomstatus']), imagemaxwidth = '{$_G['setting']['imagemaxwidth']}', aimgcount = new Array();</script>
+<style type="text/css">
+.wp, #wp{ width:100%;}
+.nex_decorpd_ads{ width:1180px; margin-bottom:20px;}
+.nex_decorpd_ads img{ width:1180px;}
+.ct2 .mn {border-right:0; float:left; width:852px;}
+.ct2 .sd{ overflow:visible; width:300px;}
+.nex_neirong_c{width:830px; padding:15px; background:#fff; border:1px solid #eee;}
+.nexzxcontents{width:1180px!important; margin:10px auto;}
+.nex_acticletop{}
+.nex_acticletop h4{ min-height: 38px; line-height: 38px; font-size: 26px; color: #333; font-weight: 400; overflow: hidden;}
+.nex_Leftdate{ height:20px; line-height:20px; font-size:14px; color:#999; margin:10px 0;}
+.nexzxcontentsums{ padding:15px; background:#f8f8f8; margin-bottom:20px;}
+.nexzxcontentsums p{ height: 60px;line-height: 30px; font-size: 12px; color: #999; overflow: hidden;}
+/*相关阅读*/
+#related_article .bm_c{ padding:0;}
+.nex_xgydbox_pd{ margin:20px 0; padding:10px 15px 0 15px; border:1px solid #eee; background:#fff; width:830px;}
+.nex_xgydbox_pd h3{ height: 40px; line-height: 40px; border-bottom: 1px solid #eee; margin-bottom: 15px; font-size: 20px; color: #4c4c4c;font-weight: 500; letter-spacing: 1px;}
+.nex_threadslists{}
+.nex_threadslists li{ margin-bottom:15px; padding-bottom:15px; border-bottom:1px dashed #eee;}
+.nex_threadslists li:last-child{ margin-bottom:0; padding-bottom:0; border-bottom:0;}
+.nex_toppicfd{ width:160px; height:120px; overflow:hidden; float:left;}
+.nex_toppicfd img{ width:160px; height:120px;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+.nex_threadslists li:hover img{transform: scale(1.1); -moz-transform: scale(1.1); -webkit-transform: scale(1.1); -o-transform: scale(1.1); -ms-transform: scale(1.1); }
+.nex_rpingsums{ max-height:50px; line-height:25px; overflow:hidden; font-size:14px; color:#999; margin-bottom:10px;}
+.nex_rpingfdf{ float:right; width:650px;}
+.nex_rpingfdf h5{ height:25px; line-height:25px; overflow:hidden; margin-bottom:10px;}
+.nex_rpingfdf h5 a{ font-size:18px; color:#434343; font-weight:400;}
+.nex_rpingfdf h5 a:hover{color:#FF5353}
+
+.nex_rfgtr{ height: 30px;}
+.nex_frzuoze{ float:left; font-size: 12px; color: #999; height: 30px; line-height: 30px;padding-left:20px; background:url(./template/nex_deco_180401/neoconex/portal_list_view/admin.png) left center no-repeat;}
+.nex_daterf{ float:right;font-size: 12px; color: #999; height: 30px; line-height: 33px; padding-left:20px;background:url(./template/nex_deco_180401/neoconex/portal_list_view/date1.png) left center no-repeat;}
+
+
+
+
+/*作者栏*/
+.nex_fabuxinxi{ width:268px; padding:15px; background:#fff url(./template/nex_deco_180401/neoconex/portal_list_view/user_bg.jpg) top center no-repeat;; border:1px solid #eee; margin-bottom:20px; position:relative;}
+.nex_fabuxinxi i{ display:block; width:12px; height:20px; background:url(./template/nex_deco_180401/neoconex/portal_list_view/b-trangle.png) center no-repeat; position:absolute; top:88px; left:-12px;}
+
+.bm{ border:0; margin-bottom:0;}
+.nex_fbxxtop{}
+.nex_fbxxtop a{ display:block; padding-top:10px; }
+.nex_tx{width:80px; height:80px; margin:0 auto; padding: 5px; background: #fff; border-radius:100%;}
+.nex_tx img{width:80px; height:80px; border-radius:100%;}
+.nex_zzm{ text-align:center; height:20px; line-height:20px; margin:10px 0; font-size:16px; color:#333; font-weight:500;}
+.nex_fbxxtop a span{ display:block; width:80px; height:20px; margin:0 auto 15px auto; line-height:20px; text-align:center; font-size:12px; color:#fff; border-radius:24px;  background: #FF5353;}
+.nex_zztouxian{ display:block; margin:10px auto 15px auto; text-align:center;height:23px; line-height:23px; background:#FF5353; font-size:12px; color:#fff; border-radius:24px; max-width:80px; overflow:hidden;}
+.nex_fbxxtop a em{ text-align:center; height:20px; line-height:20px; font-size:12px; color:#333; display:block; margin-bottom:15px;}
+
+.nexfabuxinxi_addnCars{ text-align:center; overflow:hidden; margin-bottom:10px;}
+.nexfabuxinxi_addnCars ul{}
+.nexfabuxinxi_addnCars ul li { display:inline-block;height:14px; line-height:14px; font-size:12px; color:#999; max-width: 120px;overflow:hidden;text-overflow:ellipsis; white-space:nowrap; }
+.nexfabuxinxi_addnCars ul em{ display:inline-block; height:10px; width:1px; margin:3px 5px 0 5px; background:#bbb;}
+.nexfabuzinzi_intros{ line-height:22px; font-size:12px; color:#999; max-height:110px; overflow:hidden; min-height:22px; margin-bottom:10px; background:#f6f6f6; padding:10px;}
+
+
+.nex_fbxxbottom{ padding-top:10px;}
+.nex_fbxxbottom span{ text-align:center; font-size:12px; color:#999;  float: left;  width: 33%; display:block;line-height: 24px;}
+.nex_fbxxbottom span.nex_sss{ margin-right:-1px;}
+.nex_fbxxbottom span.nex_views{ border-left:1px solid #eee; border-right:1px solid #eee; width: 34%;}
+.nex_fbxxbottom span.nex_replies{margin-left:-1px;}
+.nex_fbxxbottom span.nex_replies a{}
+.nex_fbxxbottom span em{ display: block; font-size: 20px; color: #333;  font-weight: 300;}
+.nex_xgydbox{ padding:15px; background:#fff; width:268px; border:1px solid #eee; margin-bottom:15px; }
+
+/*上一篇下一篇*/
+.nex_updowns{}
+.nex_updowns h5{font-size:16px; color:#999; font-weight:400;height:30px; line-height:30px;}
+.nex_updowns h5.nexupdowns_up{}
+.nex_updowns h5.nexupdowns_down{ margin-top:5px;}
+.nex_updowns a{ display:block; height:30px; line-height:30px; font-size:14px; color:#666; overflow:hidden;text-overflow:ellipsis; white-space:nowrap; }
+.nex_updowns a:hover{ color:#FF5353}
+
+</style>
+
+
+<!--{hook/view_article_top}-->
+<!--{ad/text/wp a_t}-->
+<div class="wp">
+	<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+<div id="pt" class="bm cl">
+	<div class="w1180">
+        <div class="z">
+            <a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+            <a href="$_G[setting][navs][1][filename]">{lang nav_index}</a> <em>&rsaquo;</em>
+            <!--{loop $cat[ups] $value}-->
+                <a href="{echo getportalcategoryurl($value[catid])}">$value[catname]</a><em>&rsaquo;</em>
+            <!--{/loop}-->
+            <a href="{echo getportalcategoryurl($cat[catid])}">$cat[catname]</a> <em>&rsaquo;</em>
+            {lang view_content}
+        </div>
+    </div>
+</div>
+<div id="ct" class="ct2 wp cl nexzxcontents">
+	    <div class="nex_decorpd_ads"><!--[diy=nexzxcontents]--><div id="nexzxcontents" class="area"></div><!--[/diy]--></a></div>
+    	<div class="mn">
+        	<div class="nex_neirong_c">
+                <div class="nex_acticletop">
+                    <h4>$article[title] <!--{if $article['status'] == 1}-->({lang moderate_need})<!--{elseif $article['status'] == 2}-->({lang ignored})<!--{/if}--></h4>
+                    <div class="nex_Leftdate">$article[dateline]</div>
+                </div>
+                <div class="nexmanagerart">
+                    <span class="nex_edit"><!--{if $article[author]}-->{lang view_author_original}: $article[author]<!--{/if}-->
+                            <!--{if $article[from]}-->{lang from}: <!--{if $article[fromurl]}--><a href="$article[fromurl]" target="_blank">$article[from]</a><!--{else}-->$article[from]<!--{/if}--><!--{/if}-->
+                            <!--{if $_G['group']['allowmanagearticle'] || ($_G['group']['allowpostarticle'] && $article['uid'] == $_G['uid'] && (empty($_G['group']['allowpostarticlemod']) || $_G['group']['allowpostarticlemod'] && $article['status'] == 1)) || $categoryperm[$value['catid']]['allowmanage']}-->
+                            <a href="portal.php?mod=portalcp&ac=article&op=edit&aid=$article[aid]">{lang edit}</a>
+                         </span>
+                         <span class="nex_delete">
+                            <!--{if $article[status]>0 && ($_G['group']['allowmanagearticle'] || $categoryperm[$value['catid']]['allowmanage'])}-->
+                            <a href="portal.php?mod=portalcp&ac=article&op=verify&aid=$article[aid]" id="article_verify_$article[aid]" onclick="showWindow(this.id, this.href, 'get', 0);">{lang moderate}</a>
+                                <!--{else}-->
+                                    <a href="portal.php?mod=portalcp&ac=article&op=delete&aid=$article[aid]" id="article_delete_$article[aid]" onclick="showWindow(this.id, this.href, 'get', 0);">{lang delete}</a>
+                                <!--{/if}-->
+                            <!--{/if}-->
+                            <!--{hook/view_article_subtitle}-->
+                         </span>
+                         <span class="nex_shoucang"><a href="home.php?mod=spacecp&ac=favorite&type=article&id=$article[aid]&handlekey=favoritearticlehk_{$article[aid]}" id="a_favorite" onclick="showWindow(this.id, this.href, 'get', 0);">{lang favorite}</a></span>
+                        <!--{if helper_access::check_module('share')}-->
+                        <span class="nex_fenxianga"><a href="home.php?mod=spacecp&ac=share&type=article&id=$article[aid]&handlekey=sharearticlehk_{$article[aid]}" id="a_share" onclick="showWindow(this.id, this.href, 'get', 0);">{lang share}</a></span>
+                        <!--{/if}-->
+                        <span class="nex_yaoqing"><a href="misc.php?mod=invite&action=article&id=$article[aid]" id="a_invite" onclick="showWindow('invite', this.href, 'get', 0);">{lang invite}</a></span>
+                        <!--{if $_G['group']['allowmanagearticle'] || ($_G['group']['allowpostarticle'] && $article['uid'] == $_G['uid'] && (empty($_G['group']['allowpostarticlemod']) || $_G['group']['allowpostarticlemod'] && $article['status'] == 1)) || $categoryperm[$value['catid']]['allowmanage']}-->
+                        <span class="nex_adds"><a id="related_article" href="portal.php?mod=portalcp&ac=related&aid=$article[aid]&catid=$article[catid]&update=1" onclick="showWindow(this.id, this.href, 'get', 0);return false;">{lang article_related}</a></span>
+                        
+                        <!--{/if}-->
+                        <!--{if $article[status]==0 && ($_G['group']['allowdiy']  || getstatus($_G['member']['allowadmincp'], 4) || getstatus($_G['member']['allowadmincp'], 5) || getstatus($_G['member']['allowadmincp'], 6))}-->
+                        <span class="nex_pushed"><a href="portal.php?mod=portalcp&ac=portalblock&op=recommend&idtype=aid&id=$article[aid]" onclick="showWindow('recommend', this.href, 'get', 0)">{lang blockdata_recommend}</a></span>
+                        <!--{/if}-->
+                </div>
+                <!--{if $article[summary] && empty($cat[notshowarticlesummay])}-->
+                <div class="nexzxcontentsums">
+                    <p>$article[summary]</p>
+                </div>
+                <!--{hook/view_article_summary}-->
+                <!--{/if}-->
+                <div class="bm vw">
+                  <div class="d"> 
+                    <table cellpadding="0" cellspacing="0" class="vwtb">
+                      <tr>
+                        <td id="article_content"><!--{ad/article/a_af/1}--> 
+                          <!--{if $content[title]}-->
+                          
+                          <div class="vm_pagetitle xw1">$content[title]</div>
+                          
+                          <!--{/if}--> 
+                          $content[content] </td>
+                      </tr>
+                    </table>
+                    <!--{hook/view_article_content}--> 
+                    <!--{if $multi}-->
+                    <div class="ptw pbw cl">$multi</div>
+                    <!--{/if}-->
+                    
+                    <div class="o cl ptm pbm"> 
+                      <!--{hook/view_article_op_extra}--> 
+                    <script type="text/javascript" src="{$_G[setting][jspath]}home.js?{VERHASH}"></script>
+                    <div id="click_div"> 
+                      <!--{template home/space_click}--> 
+                    </div>
+                    
+                    <!--{if !empty($contents)}-->
+                    <div id="inner_nav" class="ptn xs1">
+                      <h3>{lang article_inner_navigation}</h3>
+                      <ul class="xl xl2 cl">
+                        <!--{loop $contents $key $value}--> 
+                        <!--{eval $curpage = $key+1;}--> 
+                        <!--{eval $inner_view_url = helper_page::mpurl($viewurl, 'page=', $curpage);}-->
+                        <li>&bull; <a href="$inner_view_url"{if $key === $start} class="xi1"{/if}>{lang article_inner_page_pre} {$curpage} {lang article_inner_page} $value[title]</a></li>
+                        <!--{/loop}-->
+                      </ul>
+                    </div>
+                    <!--{/if}--> 
+                    
+                    <!--[diy=diycontentclickbottom]-->
+                    <div id="diycontentclickbottom" class="area"></div>
+                    <!--[/diy]--> 
+                    
+                  </div>
+                  <!--{if !empty($aimgs[$content[pid]])}--> 
+                  <script type="text/javascript" reload="1">aimgcount[{$content[pid]}] = [<!--{echo implode(',', $aimgs[$content[pid]]);}-->];attachimgshow($content[pid]);</script> 
+                  <!--{/if}--> 
+                  
+                  <!--{if !empty($_G['setting']['pluginhooks']['view_share_method'])}-->
+                  <div class="tshare cl"> <strong>{lang viewthread_share_to}:</strong> 
+                    <!--{hook/view_share_method}--> 
+                  </div>
+                  <!--{/if}--> 
+                  
+                </div>
+                <!--{ad/article/mbm hm/2}--><!--{ad/article/mbm hm/3}--> 
+                <!--{if $article['allowcomment']==1}--> 
+                <!--{eval $data = &$article}--> 
+                <!--{subtemplate portal/portal_comment}--> 
+                <!--{/if}-->     
+                </div>
+            </div>
+            <!--{if $article['related']}-->
+            <!--相关文章阅读-->
+            <div class="nex_xgydbox_pd">
+                <h3>{lang view_related}</h3>
+                <div id="related_article" class="bm">
+                    <ul class="nex_threadslists" id="raid_div">
+                      <!--{loop $article['related'] $raid $rvalue}-->
+                      <li>
+                        <div class="nex_toppicfd">
+                        	<!--{if $rvalue[pic]}-->
+                            <a href="{$rvalue[uri]}" target="_blank"><img src="data/attachment/$rvalue[pic]"/></a>
+                            <!--{else}--><a href="$article_url" target="_blank"><img src="$_G['style'][styleimgdir]/portal_list_view/nopic.jpg" /></a><!--{/if}-->
+                        </div>
+                        <div class="nex_rpingfdf">
+                            <h5><a href="{$rvalue[uri]}">{$rvalue[title]}</a></h5>
+                            <div class="nex_rpingsums">{$rvalue[summary]}</div>
+                            <div class="nex_rfgtr">
+                            	<div class="nex_frzuoze">$rvalue[username]</div>
+                                <div class="nex_daterf"><!--{echo date("Y-m-d",$rvalue[dateline])}--></div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                      </li>
+                      <!--{/loop}-->
+                      <div class="clear"></div>
+                    </ul>
+                </div>
+            </div>
+            <!--{/if}-->
+        </div>
+    	<div class="sd pph">
+            <div class="nex_fabuxinxi">
+            	<i></i>
+                <div class="nex_fbxxtop">
+                    <a href="home.php?mod=space&uid=$article[uid]" target="_blank">
+                        <div class="nex_tx"><!--{avatar($article[uid],big)}--></div>
+                        <div class="nex_zzm">$article[username]</div>
+                        <div class="nexfabuxinxi_addnCars">
+                            <ul>
+                                <!--{eval include 'template/nex_deco_180401/php/nex_portal.php'}-->
+                                <!--{if $nex_province == '' && $nex_adds == ''}-->
+                                <li>未知城市</li>
+                                <!--{else}-->
+                                <li>{$nex_province}{$nex_adds}</li>
+                                <!--{/if}-->
+                                <em></em>
+                                <!--{if $nex_occu == ''}-->
+                                <li>职业未填写</li>
+                                <!--{else}-->
+                                <li>{$nex_occu}</li>
+                                <!--{/if}-->
+                                <div class="clear"></div>
+                            </ul>
+                        </div>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+                <div class="nexfabuzinzi_intros">
+                    <!--{if $nex_intros == ''}-->
+                    这个人很懒，什么也没留下...
+                    <!--{else}-->
+                    {$nex_intros}
+                    <!--{/if}-->
+                </div>
+                <div class="nex_fbxxbottom">
+                	<!--{eval include 'template/nex_deco_180401/php/nex_portal.php'}-->
+                    <span class="nex_sss">粉丝<em>$nexusersfollows[follower]</em></span>
+                    
+                    <span class="nex_views">阅读<em><!--{if $article[viewnum] > 0}-->$article[viewnum]<!--{else}-->0<!--{/if}--></em></span>
+                    <span class="nex_replies">回复<!--{if $article[commentnum] > 0}--><a href="$common_url" title="{lang view_all_comments}"><em>$article[commentnum]</em></a><!--{else}--><em>0</em><!--{/if}--></span>
+                    <div class="clear"></div>
+                </div>
+                
+            </div>
+            <!--上一篇下一篇-->
+            <!--{if $article['preaid'] || $article['nextaid']}-->
+            <div class="nex_xgydbox">
+                <div class="nex_updowns">
+                	<h5 class="nexupdowns_up">{lang pre_article}</h5>
+                    <!--{if $article['prearticle']}--><a href="{$article['prearticle']['url']}">{$article['prearticle']['title']}</a><!--{/if}-->
+                    <h5 class="nexupdowns_down">{lang next_article}</h5>
+                    <!--{if $article['nextarticle']}--><a href="{$article['nextarticle']['url']}">{$article['nextarticle']['title']}</a><!--{/if}-->
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!--{/if}-->
+            <!--推荐资讯-->
+            <div class="nex_side_boxs">
+                <div class="nex_side_bx_top">推荐资讯<a href="#" target="_blank">...</a><div class="clear"></div></div>
+                <div class="nex_tuijian">
+                    <div class="nex_focusBox">
+                        <!--[diy=nex_focusBox]--><div id="nex_focusBox" class="area"></div><!--[/diy]-->
+                        
+                        <ul class="hd">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                
+                    <script type="text/javascript">
+                        jQuery(".nex_focusBox").slide({ mainCell:".bd",effect:"left", autoPlay:true, delayTime:300});
+                    </script>
+                </div>
+            </div>
+            <!--家装百科-->
+            <div class="nex_side_boxs">
+                <div class="nex_side_bx_top">家装百科<a href="#" target="_blank">...</a><div class="clear"></div></div>
+                <div class="nex_readings">
+                    <ul>
+                        <!--[diy=nex_readings]--><div id="nex_readings" class="area"></div><!--[/diy]-->
+                        
+                    </ul>
+                </div>
+            </div>
+            <!--热门阅读-->
+            <div class="nex_side_boxs">
+                <div class="nex_side_bx_top">热门阅读<a href="#" target="_blank">...</a><div class="clear"></div></div>
+                <div class="nex_pivlists">
+                    <ul>
+                        <!--[diy=nex_pivlists]--><div id="nex_pivlists" class="area"></div><!--[/diy]-->
+                    </ul>
+                </div>
+                <script type="text/javascript">
+                    jQuery(".nex_pivlists ul li").each(function(s){
+                        jQuery(this).hover(function(){
+                            jQuery(this).addClass("on").siblings().removeClass("on");
+                            })
+                        })
+                </script>
+            </div>
+            
+            <!--装修攻略-->
+            <div class="nex_side_boxs">
+                <div class="nex_side_bx_top">装修攻略<a href="#" target="_blank">...</a><div class="clear"></div></div>
+                <div class="nex_selcases">
+                    <ul>
+                        <!--[diy=nex_selcases]--><div id="nex_selcases" class="area"></div><!--[/diy]-->
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+                
+            </div>
+            <!--广告位-->
+            <div class="nex_portal_ads">
+                <!--[diy=nex_portal_ads]--><div id="nex_portal_ads" class="area"></div><!--[/diy]-->
+                    
+            </div>
+            
+        </div>
+    	<div class="clear"></div>
+	
+</div>
+
+<!--{if $_G['relatedlinks']}-->
+	<script type="text/javascript">
+		var relatedlink = [];
+		<!--{loop $_G['relatedlinks'] $key $link}-->
+		relatedlink[$key] = {'sname':'$link[name]', 'surl':'$link[url]'};
+		<!--{/loop}-->
+		relatedlinks('article_content');
+	</script>
+<!--{/if}-->
+
+<div class="wp mtn">
+	<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+<input type="hidden" id="portalview" value="1">
+
+<!--{template common/footer}-->

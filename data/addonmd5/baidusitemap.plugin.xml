@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Addon MD5]]></item>
+	<item id="ID"><![CDATA[baidusitemap.plugin]]></item>
+	<item id="RevisionID"><![CDATA[50866]]></item>
+	<item id="SN"><![CDATA[2018102016D13p9qId1P]]></item>
+	<item id="RevisionDateline"><![CDATA[1504512001]]></item>
+	<item id="Data">
+		<item id="/discuz_plugin_baidusitemap_TC_BIG5.xml"><![CDATA[e2f940dc546c71ef685c517d68b50349]]></item>
+		<item id="/discuz_plugin_baidusitemap_SC_UTF8.xml"><![CDATA[6e584a1c289144b723f2b6d64ea7b714]]></item>
+		<item id="/addon.inc.php"><![CDATA[792cade73b5ab4e8d481eea1df881742]]></item>
+		<item id="/hook.class.php"><![CDATA[2075911d35e60cb7c379a7de3497bcee]]></item>
+		<item id="/logs.inc.php"><![CDATA[198aceebabc122e1da0f283c1790a627]]></item>
+		<item id="/discuz_plugin_baidusitemap_TC_UTF8.xml"><![CDATA[6e4e091ef28b3f1c7fbd33deb3844486]]></item>
+		<item id="/discuz_plugin_baidusitemap_SC_GBK.xml"><![CDATA[4043e6873c8a8a901382d7f754ec733f]]></item>
+		<item id="/install.php"><![CDATA[cff8bf052f9c9bf058f84516362df7a9]]></item>
+		<item id="/uninstall.php"><![CDATA[011e464bd3af8bd36052f4d95904835e]]></item>
+		<item id="/template/list.htm"><![CDATA[6f2ae4c29c6d83cbec2ad6a1bf96cf09]]></item>
+	</item>
+</root>

@@ -1,0 +1,192 @@
+<!--{template common/header}-->
+<!--[name][星点互联装修装饰风格-关于我们频道页][/name]-->
+
+<link rel="stylesheet" type="text/css" href="./template/nex_deco_180401/neoconex/about/main.css">
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<a href="$_G[setting][navs][1][filename]">{lang portal}</a> <em>&rsaquo;</em>
+		<!--{loop $cat[ups] $value}--> <a href="{$portalcategory[$value['catid']]['caturl']}">$value[catname]</a><em>&rsaquo;</em><!--{/loop}-->
+		$cat[catname]
+	</div>
+</div>
+<div class="nexabtbd">
+    <div class="nex_ab_top">
+        <ul>
+            <li class="cur">公司介绍</li>
+            <li>发展大事记</li>
+            <li>公司招聘</li>
+            <li>企业新闻</li>
+            <li class="nex_lastlistli">联系我们</li>
+            <div class="clear"></div>
+        </ul>
+    </div>
+	<script type="text/javascript">
+	jQuery(function() { 
+		var elm = jQuery('.nex_ab_top'); 
+		var startPos = jQuery(elm).offset().top; 
+		jQuery.event.add(window, "scroll", function() { 
+			var p = jQuery(window).scrollTop(); 
+			jQuery(elm).css('position',((p) > startPos) ? 'fixed' : 'static'); 
+			jQuery(elm).css('top',((p) > startPos) ? '45px' : ''); 
+			jQuery(elm).css('z-index',((p) > startPos) ? '2' : '');
+		}); 
+	}); 
+	</script>
+    <div class="nex_ab_main">
+        <div class="nex_ab_bottom">
+            <ul>
+                <li style="display:block;">
+                    <div class="nex_topbards"></div>
+                    <div class="nex_aboutusbx">
+                    	<div class="nex_about_title">
+                            <h1>公司介绍</h1>
+                        </div>
+                        <div class="nex_ab_line_txt">
+                        	<!--[diy=nex_ab_line_txt]--><div id="nex_ab_line_txt" class="area"></div><!--[/diy]-->
+                        	
+                        </div>
+                        <div class="nex_about_title">
+                            <h1>我们的团队</h1>
+                        </div>
+                        <div class="nex_ab_line_txt">
+                        	<!--[diy=nex_ab_line_txt4]--><div id="nex_ab_line_txt4" class="area"></div><!--[/diy]-->
+                        	
+                        </div>
+                        <div class="nex_pivgfhd">
+                        	<!--[diy=nex_pivgfhd]--><div id="nex_pivgfhd" class="area"></div><!--[/diy]-->
+                        	
+                            <div class="clear"></div>
+                        </div>
+                        <div class="nex_about_title">
+                            <h1>服务宗旨</h1>
+                        </div>
+                        <div class="nex_ab_line_txt">
+                        	<!--[diy=nex_ab_line_txt1]--><div id="nex_ab_line_txt1" class="area"></div><!--[/diy]-->
+                        	
+                        </div>
+                        <div class="nex_ab_line_txt">
+                        	<!--[diy=nex_ab_line_txt2]--><div id="nex_ab_line_txt2" class="area"></div><!--[/diy]-->
+                        	
+                        </div>
+                        <div class="nex_ab_line_txt">
+                        	<!--[diy=nex_ab_line_txt3]--><div id="nex_ab_line_txt3" class="area"></div><!--[/diy]-->
+                        	
+                        </div>
+                        
+                    </div>
+                    
+                </li>
+                <li>
+                    <div class="nex_topbards nex_topbards1"></div>
+                   	<div class="nex_aboutusbx">
+                    	
+                    	<div class="nex_develops">
+                            <dl>
+                                <!--[diy=nex_develops]--><div id="nex_develops" class="area"></div><!--[/diy]-->
+                                
+
+                            </dl>
+                        </div>
+                    </div>
+                    
+                </li>
+                <!--招聘-->
+                <li>
+                	<div class="nex_topbards nex_topbards2"></div>
+                    <div class="nex_aboutusbx">
+                    	
+                        <!--[diy=nex_jobtab]--><div id="nex_jobtab" class="area"></div><!--[/diy]-->
+                        
+                        <div class="nex_jobtab">
+                        	<dl>
+                            	<dd class="nex_cur">技术部门</dd>
+                                <dd>销售部门</dd>
+                                <dd>财务部门</dd>
+                                <dd>其他岗位</dd>
+                                <div class="clear"></div>
+                            </dl>
+                        </div>
+                        <div class="nex_jobcontant">
+                        	<dl>
+                            	<dd style="display:block;">
+                                	<!--[diy=nex_jobcontant]--><div id="nex_jobcontant" class="area"></div><!--[/diy]-->
+                                	
+                                </dd>
+                                <dd>
+                                	<!--[diy=nex_jobcontant1]--><div id="nex_jobcontant1" class="area"></div><!--[/diy]-->
+                                	
+                                </dd>
+                                <dd>
+                                	<!--[diy=nex_jobcontant2]--><div id="nex_jobcontant2" class="area"></div><!--[/diy]-->
+                                	
+                                </dd>
+                                <dd>
+                                	<!--[diy=nex_jobcontant3]--><div id="nex_jobcontant3" class="area"></div><!--[/diy]-->
+                                </dd>
+                            </dl>
+                        </div>
+                        <script type="text/javascript">
+							jq(".nex_jobtab dl dd").each(function(s){
+								jq(this).click(function(){
+									jq(this).addClass("nex_cur").siblings().removeClass("nex_cur");
+									jq(".nex_jobcontant dl dd").eq(s).show().siblings().hide();
+									})
+								})
+						</script>
+                        
+                    </div>
+                </li>
+                <!--企业新闻-->
+                <li>
+                	<div class="nex_topbards nex_topbards3"></div>
+                    <div class="nex_aboutusbx">
+                    	<div class="nex_corpnews">
+                        	<dl>
+                            	<!--[diy=nex_corpnews]--><div id="nex_corpnews" class="area"></div><!--[/diy]-->
+                            	
+                            </dl>
+                        </div>
+                        
+                    </div>
+                </li>
+                <!--联系我们-->
+                <li>
+                	<div class="nex_topbards nex_topbards4"></div>
+                    <div class="nex_aboutusbx">
+                    	
+                        <div class="nex_abcontact">
+                        	<div class="nex_abtop_csfd"></div>
+                            <div class="nex_contactslists">
+                            	<div class="nex_maps">
+                                	<!--[diy=nex_maps]--><div id="nex_maps" class="area"></div><!--[/diy]-->
+                                	
+                                </div>
+                                <div class="nex_colits">
+                                	<!--[diy=nex_colits]--><div id="nex_colits" class="area"></div><!--[/diy]-->
+                                	
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <script type="text/javascript">
+        jQuery(function(){
+            jQuery(".nex_ab_top li").each(function(a){
+                jQuery(this).click(function(){
+                    jQuery(this).addClass("cur").siblings().removeClass("cur");
+                    jQuery(".nex_ab_bottom li").eq(a).show().siblings().hide();
+                    })
+                })
+            })
+    </script>
+</div>
+<!--{template common/footer}-->
+
+                                      
+                                        

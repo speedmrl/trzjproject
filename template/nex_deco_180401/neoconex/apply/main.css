@@ -1,0 +1,166 @@
+@charset "utf-8";
+/*
+模板版权所有归星点互联（Neoconex）所有，请尊重版权与原创；
+任何模板使用问题，请联络QQ：1691000615 寻求解决。
+版本：vision1.0
+*/
+/*底部广告开启*/
+.nex_sideJmm{ position: fixed;bottom: 0;width: 100%;  left: 0; z-index:211;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+.nex_sideJmm .nex_sJmm-big-cont{ height: 121px; width: 100%; background:url(nex_btn_bg.png) repeat; }
+.nex_fttools{ width: 1180px; height: 140px; position: relative; margin: 0 auto;}
+.nex_pic_person{ float: left; width: 540px; height: 133px; margin: -12px 0px 0 0; background: url(nex_person.png) no-repeat;}
+
+.nex_ld_area{ float: left; margin-left:30px; height:100px;overflow: hidden; background: #353A4E; padding:10px;}
+.nex_ld_area h5{ height:20px; line-height:20px; font-size:12px; color:#fff; font-weight:400; margin-bottom:5px;}
+.nex_ld_area h5 em{ color:#FF9900; margin:0 5px;}
+.nex_ld_area_top{ margin-bottom:10px; height:30px;}
+.nex_cityaera{ float:left; width:90px; height:30px; line-height:30px; font-size:14px; color:#999;border-color:#fff; border:0; padding:5px;}
+.nex_decostyles{float:left; width:90px; height:30px; line-height:30px; font-size:14px; color:#999;border-color:#fff; border:0;  padding:5px;margin-left:10px;}
+.nex_huxing{float:left; width:90px; height:30px; line-height:30px; font-size:14px; color:#999;border-color:#fff; border:0; padding:5px; margin-left:10px;}
+.nex_zxyusuan{float:left; width:90px; height:30px; line-height:30px; font-size:14px; color:#999;border-color:#fff; border:0; padding:5px; margin-left:10px;}
+.nex_ld_area_btm{}
+.nex_ld_typein_box{float:left;  position:relative; margin-right:10px;}
+.nex_ld_typein_box input{width:90px; height:20px; line-height:20px; padding:5px; font-size:14px; color:#999;border-color:#fff; border:0;}
+.nex_ld_typein_box input.nex_ld_typein_cellphone{ width:120px;}
+.nex_ld_typein_box em{ position:absolute; top:5px; right:5px; display:block; font-size:12px; color:#FF9900;}
+.nex_summition{ }
+.nex_tijiao_buttons{ display:block;float:right; width:119px; height:121px; background:#FF9900; line-height:121px; border:0; font-family:Microsoft Yahei; text-align:center; font-size:14px; color:#fff; cursor:pointer;}
+
+
+.nex_sideJmm .nex_sJmm-btn-box{display:block;width: 40px; height: 40px; position:absolute; top:15px; right:15px; background: url(close.png) no-repeat; cursor: pointer; opacity: 1; transition: all .2s;cursor:pointer;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+
+/*底部广告关闭*/
+.nex_sideJmmClose{transition: all 0.5s 0.5s;position: fixed;left:0px;bottom: 60px; width: 150px; height: 86px; min-width:0;}
+.nex_sideJmmClose .nex_sJmm-big-cont{ display:none;}
+.nex_sideJmmClose .nex_sJmm-btn-box{ position:absolute; left:0; bottom:40px;cursor: pointer; opacity: 1;cursor:pointer;  width: 160px; height: 119px; background: url(hiddenicon.png) no-repeat center 0; transition: all .5s;}
+
+body{ background:#fff!important;}
+.wp,#wp{ width:100%!important;}
+.nex_apply_Top{ width:100%; height:450px; min-width:1180px; background:url(banner.jpg) center no-repeat;}
+.nex_slider_inter{width: 1180px; margin: 0 auto; position: relative;  z-index: 33;}
+.nex_slider_interbox{ width: 258px; height: 360px; background: #fff; border:1px solid #eee; position: absolute; top: 24px; right: 0; z-index: 11; padding:20px;}
+
+
+.nex_vt_formpost{ width: 258px; height: 375px; margin-bottom:15px; background: #fff; border:1px solid #eee;padding:10px 15px 0 15px;}
+.nex_slider_interbox_top{ width:258px; height:40px; line-height:40px; border-bottom:2px solid #FF9900; font-size:20px; color:#FF9900; font-weight:400; position:relative; text-indent:50px;}
+.nex_slider_interbox_top i{ display:block; width:27px; height:25px; position:absolute; top:7px; left:15px; background:url(design.png) no-repeat;}
+.nex_apply_Top h5{ height:30px; line-height:30px; margin:10px 0; overflow:hidden; font-size:12px; color:#999; font-weight:300;}
+.nex_plugin_measure{ margin-bottom:10px;}
+.nex_plugin_Name{ width:236px; height:30px; line-height:30px; font-size:14px; color:#999;border-color:#fff; border:1px solid #eee; padding:5px 10px;}
+.nex_plugin_Numbers{width:236px; height:30px; line-height:30px; font-size:14px; color:#999;border-color:#fff; border:1px solid #eee; padding:5px 10px;}
+.nex_plugin_aera{ float:left; margin-bottom:10px;}
+.nex_plugin_quyu{width:90px; height:42px; line-height:42px; font-size:14px; color:#999;border-color:#eee; border:1px solid #eee;  padding:5px;background:#fff;}
+.nex_plugin_xiaoqu{ float:right; margin-bottom:10px;}
+.nex_mansion_name{ width:149px; height:30px; line-height:30px; font-size:14px; color:#999;border-color:#eee; border:1px solid #eee;  padding:5px;background:#fff;}
+.nex_plugin_tijiao_buttons{ width:258px; height:42px; line-height:42px; background:#FF9900; font-size:14px; color:#fff; text-align:center; overflow:hidden; border:0; cursor:pointer; font-family:Microsoft Yahei;}
+.nex_adv_plugin{ margin-top:18px;}
+.nex_adv_plugin ul{}
+.nex_adv_plugin ul li{ float:left; width:64.5px; text-align:center;}
+.nex_adv_plugin ul li img{ width:30px; height:30px; margin:0 auto;}
+.nex_adv_plugin ul li p{ height:20px; line-height:20px; font-size:12px; color:#FF9900; margin-top:5px; overflow:hidden;}
+
+.nex_applycommonbox{ padding:80px 0; width:100%; min-width:1180px; background:#fff;}
+.nex_applycommonboxTop{ text-align:center; margin-bottom:40px;}
+.nex_applycommonboxTop h5{ height:40px; line-height:40px; overflow:hidden;font-size: 40px; color: #FF9900; margin-bottom:15px;}
+.nex_applycommonboxTop p{height: 22px; font-size: 22px; color: #333; line-height: 22px;}
+
+.nex_apply_liucheng{ }
+.nex_apply_liucheng ul{ width:1200px;}
+.nex_apply_liucheng ul li{ width:222px; float:left; border:1px solid #FF9900; height:60px; padding:15px; background:#FFEFEF;}
+.nex_apply_lcseprated{margin:32px 20px;float:left; width:15px; height:26px; background:url(right.png) no-repeat; }
+.nex_apply_lc_icon{ float:left; width:60px; height:60px;}
+.nex_apply_lc_icon img{width:60px; }
+.nex_apply_lc_infos{ float:right; width:145px;}
+.nex_apply_lc_infos h5{ height:30px; line-height:30px; font-size:18px; color:#333; font-weight:500; overflow:hidden;}
+.nex_apply_lc_infos p{ height:20px; line-height:20px; font-size:14px; color:#999; overflow:hidden; margin-top:5px;}
+.nex_applycommonbox_bg{ background:#fafafa;}
+.nex_liangfang{}
+.nex_liangfang ul{ width:1210px;}
+.nex_liangfang ul li{ float:left; width:280px; height:175px; margin-right:20px;}
+.nex_liangfang ul li img{width:280px; height:175px;}
+
+.nex_decodesigns{ width:1180px; height:440px; position:relative; overflow:hidden;}
+.nex_decodesigns ul{}
+.nex_decodesigns ul li{}
+.nex_decodesigns ul li.nex_decodesigns_img1{ position:absolute; top:0; left:0; width:500px; height:440px; background:url(style_1.jpg) center no-repeat; background-size:500px 440px;}
+.nex_decodesigns ul li.nex_decodesigns_img1 em{ display:block; width:500px; height:440px; background:rgba(0,0,0,0.3); position:absolute; top:0; left:0;}
+.nex_decodesigninter1{ width:260px; height:180px; padding:40px 20px; position:absolute; top:90px; left:0; background:rgba(255,255,255,0.6);}
+.nex_decodesigninter1 h5{ height:30px; line-height:30px; font-size:22px; color:#000; font-weight:600; text-align:center;overflow:hidden;}
+.nex_decodesigninter1 p{ height:20px; line-height:20px; margin:10px 0;font-size:16px; color:#000; font-weight:300; text-align:center; overflow:hidden;}
+.nex_decodesigninter1 h4{ height:50px; line-height:25px; overflow:hidden; font-size:16px; text-align:center;color:#333;}
+.nex_decostyle_btm{}
+.nex_decostyle_btm a{ display:block; width:160px; height:35px; line-height:35px; text-align:center; margin:20px auto; background:#FF9900; font-size:14px; color:#fff;}
+.nex_decodesigns ul li.nex_decodesigns_img2{ position:absolute; top:0; left:520px; width:430px; height:210px; background:url(style_2.jpg) center no-repeat; background-size:430px 210px; }
+.nex_decostyle_tuijian{ width:50px; height:50px; padding:10px; border-radius:100%; background:#FF9900; line-height:50px; text-align:center; overflow:hidden; position:absolute; top:20px; right:20px; font-size:12px; color:#fff;}
+.nex_decostyle_btmlocal{ width:137px; height:60px; position:absolute; left:20px; bottom:40px;}
+.nex_decostyle_btmlocal h5{ height:30px; line-height:30px; font-size:22px; color:#000; margin-bottom:10px; font-weight:500; overflow:hidden;}
+.nex_decostyle_btmlocal p{ width:137px; height:18px; line-height:18px; padding:5px 10px; font-size:12px; color:#fff; background:#000; overflow:hidden;}
+.nex_decodesigns ul li.nex_decodesigns_img3{ position:absolute; top:0; right:0; width:210px; height:210px; background:url(style_3.jpg) center no-repeat; background-size:210px 210px; }
+.nex_decostyle3inter{ padding:50px 20px; background:rgba(0,0,0,0.3); position:absolute; top:0; left:0; width:170px; height:110px;}
+.nex_decostyle3inter h5{ height:30px; line-height:30px; text-align:center; font-size:22px; color:#fff; padding-bottom:10px; margin-bottom:10px; border-bottom:1px solid #fff;}
+.nex_decostyle3inter p{ height:20px; line-height:20px; font-size:14px; color:#fff; overflow:hidden; text-align:center;}
+.nex_decostyle3inter a{display:block; width:100px; height:30px; line-height:30px; text-align:center; margin:15px auto 0; background:#FF9900; font-size:12px; color:#fff; font-weight:300;}
+.nex_decodesigns ul li.nex_decodesigns_img4{ position:absolute; bottom:0; left:520px; width:210px; height:210px; background:url(style_4.jpg) center no-repeat; background-size:210px 210px; }
+.nex_decodesigns ul li.nex_decodesigns_img5{ position:absolute; bottom:0; right:0; width:430px; height:210px; background:url(style_5.jpg) center no-repeat; background-size:430px 210px; }
+.nex_decostyle_btmlocal1 h5{ color:#000!important; width:200px;}
+.nex_decostyle_btmlocal1{ width:200px; height:60px; position:absolute; left:20px; bottom:40px;}
+.nex_decostyle_btmlocal1 p{ width:200px; height:18px; line-height:18px; padding:5px 10px; font-size:12px; color:#fff; background:#000; overflow:hidden;}
+.nex_morecasebtn{}
+.nex_morecasebtn a{ display:block; width:260px; height:50px; line-height:50px; text-align:center; margin:35px auto 0; background:#FF9900; font-size:18px; color:#fff; font-weight:500;}
+
+.nex_applycommonboxdb_bg{ background:#f9f9f9; width:100%; height:600px; padding:0;}
+.nex_vsleft{ float:left; width:50%; height:600px; background:#E6E6E6; position:relative;}
+.nex_vsleft i{ display:block; width:182px; height:182px; background:url(vs.png) center no-repeat; position:absolute; top:256px; right:-91px; z-index:55;}
+.nex_vslefttop{ height:100px; line-height:100px; width:100%; background:#DCDCDC;}
+.nex_vslefttop h5{ font-size:26px; color:#333; font-weight:400; letter-spacing:4px; text-indent:55%; overflow:hidden;}
+.nex_vsmainbox_left{ width:590px; height:468px; position:absolute; top:100px; right:0;}
+.nex_vsmainbox_left ul li{ height:100px; line-height:100px; padding-left:20px; overflow:hidden; border-bottom:1px solid #ddd;}
+.nex_vsmainbox_left ul li:last-child{border-bottom:0;}
+.nex_vsadv{ float:left; width:28px; height:25px; margin-top:37px; background:url(co.png) center no-repeat;}
+.nex_vsrpt{ float:right; width:530px; height:100px; line-height:100px; overflow:hidden; font-size:18px; color:#333; font-weight:400;}
+.nex_vsright{ float:right; width:50%; height:600px; background:#F9F9F9; position:relative;}
+.nex_vslefttopx{ height:100px; line-height:100px; width:100%; background:#DCDCDC;}
+.nex_vslefttopx h5{ font-size:26px; color:#333; font-weight:400; letter-spacing:4px; text-indent:20%; overflow:hidden;}
+.nex_vsmainbox_right{ width:590px; height:468px; position:absolute; top:100px; left:0px;}
+.nex_vsmainbox_right ul li{ height:100px; line-height:100px; padding-left:20px; overflow:hidden; border-bottom:1px solid #ddd;}
+.nex_vsmainbox_right ul li:last-child{border-bottom:0;}
+.nex_vsadvx{ float:left; width:26px; height:26px; margin-top:37px; margin-left:130px; background:url(wo.png) center no-repeat;}
+.nex_vsrptx{ float:right; width:400px; height:100px; line-height:100px; overflow:hidden; font-size:18px; color:#333; font-weight:400;}
+.nex_quotes{}
+.nex_quotes ul{ width:1210px;}
+.nex_quotes ul li{ float:left; margin:0 20px 0 0; width:380px;}
+.nex_quotes ul li img{ width:380px;}
+
+.nex_feedbackbox{ position:relative; width:1180px;}
+.nex_feedbackbox ul{}
+.nex_feedbackbox ul li{ float:left; width:348px; height:135px; margin:0 20px 0 0; background:#fff; border:1px solid #eee; border-radius:4px; padding:15px;}
+.nex_feedbackbox_top{ height:50px; margin-bottom:20px;}
+.nex_feedbackbox_topl{ float:left; width:50px; height:50px;}
+.nex_feedbackbox_topl img{width:50px; height:50px; border-radius:100%;}
+.nex_feedbackbox_topm{ float:left; width:180px; margin-left:15px;}
+.nex_feedbackbox_topm h5{ height:30px; line-height:30px; font-size:18px; color:#333; font-weight:400;}
+.nex_feedbackbox_topm h5 em{ margin-left:10px; font-size:14px; color:#999;}
+.nex_feedbackbox_topm p{ height:20px; line-height:20px; font-size:12px; color:#FF9900; overflow:hidden;}
+.nex_feedbackbox_topr{ float:right; width:70px; margin-top:20px;}
+.nex_feedbackbox_topr img{width:70px;}
+.nex_feedbackbox_mid{ height:60px; line-height:20px; font-size:12px; color:#666; overflow:hidden;}
+.nex_feedbackbox a.prev{ display:block; width:28px; height:50px; background:url(zuo.png) center no-repeat; position:absolute; top:58px; left:-50px;}
+.nex_feedbackbox a.next{display:block; width:28px; height:50px; background:url(you.png) center no-repeat; position:absolute; top:58px; right:-50px;}
+
+.nex_decoreports{}
+.nex_decoreports ul{ width:1220px;}
+.nex_decoreports ul li{ width:250px; float:left; margin:0 50px 0 0;}
+.nex_reportimgs{}
+.nex_reportimgs img{ width:250px;}
+.nex_decoreports ul li h5{ height:44px; line-height:22px; overflow:hidden; margin:10px 0; font-size:14px; color:#333; font-weight:400;}
+.nex_decoreports ul li p{ font-size: 14px; color: #333; text-align: right; height:22px; line-height:22px; margin-top: 10px;}
+.nex_decoreports ul li p img{ display:inline-block; height:22px; vertical-align:middle; margin-right:10px; }
+.nex_decoreports ul li p img.img_size{ height:15px;}
+.nexfooter{ margin-top:0;}
+.nex_decorcontacts{ width:100%; min-width:1180px; padding:20px 0; height:30px; background:#F3F3F3;}
+.nex_decorcontactbox{}
+.nex_decorcontactbox ul{ display:table; margin:0 auto;}
+.nex_decorcontactbox ul li{ float:left; margin:0 10px; font-size:18px; color:#666;}
+.nex_decorcontactbox ul li span{ margin-right:5px;height:30px; line-height:30px; float:left;}
+.nex_decorcontactbox ul li em{ color:#FF9900;height:30px; line-height:30px;float:left; }
+.nex_decorcontactbox ul li a{ display:inline-block; width:20px; height:20px; margin-top:5px; margin-left:5px; background:url(qq_bottom.gif) center no-repeat;}

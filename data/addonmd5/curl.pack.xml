@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Addon MD5]]></item>
+	<item id="ID"><![CDATA[curl.pack]]></item>
+	<item id="RevisionID"><![CDATA[50865]]></item>
+	<item id="SN"><![CDATA[2018102016g3575XDXgx]]></item>
+	<item id="RevisionDateline"><![CDATA[1432713612]]></item>
+	<item id="Data">
+		<item id="/curl.php"><![CDATA[4f39f08722b3d606d5f7b523d72ea952]]></item>
+	</item>
+</root>

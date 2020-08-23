@@ -1,0 +1,200 @@
+<!--{template common/header}-->
+<!--[name][星点互联装修装饰风格-装修频道列表页][/name]-->
+<!--{eval $list = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $list = category_get_list($cat, $wheresql, $page);}-->
+<!--{ad/text/wp a_t}-->
+<div class="wp">
+	<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+<div class="nex_liststyle">
+    <div class="nex_liststylebd">
+        <h4>$cat[catname]</h4>
+        <div class="nex_tools">
+            <!--{if ($_G['group']['allowpostarticle'] || $_G['group']['allowmanagearticle'] || $categoryperm[$catid]['allowmanage'] || $categoryperm[$catid]['allowpublish']) && empty($cat['disallowpublish'])}-->
+            <a href="portal.php?mod=portalcp&ac=article&catid=$cat[catid]">发布文章</a>
+            <!--{/if}-->
+        </div>
+    </div>
+</div>
+<div id="ct" class="ct2 wp cl nex_zxbox">
+	<div class="mn">
+    	
+		<div class="nex_mn_left">
+        	
+            <!--[diy=listloopbottom]--><div id="listloopbottom" class="area"></div><!--[/diy]-->
+            <div class="clear"></div>
+            <div class="nex_artice">
+                <ul>
+                    <!--{loop $list['list'] $value}-->
+                    <!--{eval $highlight = article_title_style($value);}-->
+                    <!--{eval $article_url = fetch_article_url($value);}-->
+                    <li>
+                        <!--{if $value[pic]}-->
+                        <div class="nex_artice_txt"> 
+                            <a href="$article_url" target="_blank"><!--{if $value[catname] && $cat[subs]}--><em>$value[catname]</em><!--{/if}-->$value[title]</a><div class="clear"></div>
+                        </div>
+                        <div class="nex_articel">
+                            <a href="$article_url" target="_blank"><img src="$value[pic]" alt="$value[title]" width="250" height="150"/></a>
+                        </div>
+                        <div class="nex_articer">
+                        	<div class="nex_art_author">
+                                <img src="uc_server/avatar.php?uid=$value[uid]&size=large">
+                                <span>$value[username]</span>
+                                <em>$value[dateline]</em>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="nex_articersummary">$value[summary]&hellip;&hellip;</div>
+                            <div class="nex_atcertop">
+                            	<div class="nex_atcertop_left">
+                                	<dl>
+                                    	<dd class="nex_atcerviews">
+                                        	<em></em>
+                                            <p>{eval $query = DB::query("SELECT t1.viewnum from ".DB::table('portal_article_count')." t1 inner join ".DB::table('portal_article_title')." t2 on t1.aid=t2.aid WHERE t2.aid=$value[aid]"); $nex_ = DB::fetch($query);echo $nex_['viewnum'];}</p>
+                                        </dd>
+                                        <dd class="nex_atcerreplies">
+                                        	<em></em>
+                                            <p>{eval $query = DB::query("SELECT t1.commentnum from ".DB::table('portal_article_count')." t1 inner join ".DB::table('portal_article_title')." t2 on t1.aid=t2.aid WHERE t2.aid=$value[aid]"); $nex_ = DB::fetch($query);echo $nex_['commentnum'];}</p>
+                                        </dd>
+                                        <div class="clear"></div>
+                                    </dl>
+                                </div>
+                                <div class="nex_atcertop_right"><a href="$article_url" target="_blank">查看详情</a></div>
+                                <div class="clear"></div>
+                            
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                        
+                        <!--{else}-->
+                    	<div class="nex_articer_tl">
+                        	<div class="nex_articer_tl_decor"></div>
+                            <div class="nex_articenopic_txt"> 
+                                <a href="$article_url" target="_blank"><span>无图</span><!--{if $value[catname] && $cat[subs]}--><em>$value[catname]</em><!--{/if}-->$value[title]</a><div class="clear"></div>
+                            </div>
+                            <div class="nex_articersummary_n">$value[summary]&hellip;&hellip;</div>
+                            <div class="nex_articern_btm">
+                            	<div class="nex_articern_btml">
+                                    <img src="uc_server/avatar.php?uid=$value[uid]&size=large">
+                                    <span>$value[username]</span>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="nex_articern_btmr">
+                                	<dl>
+                                    	<dd>阅读：{eval $query = DB::query("SELECT t1.viewnum from ".DB::table('portal_article_count')." t1 inner join ".DB::table('portal_article_title')." t2 on t1.aid=t2.aid WHERE t2.aid=$value[aid]"); $nex_ = DB::fetch($query);echo $nex_['viewnum'];}</dd>
+                                        <dd>回复：{eval $query = DB::query("SELECT t1.commentnum from ".DB::table('portal_article_count')." t1 inner join ".DB::table('portal_article_title')." t2 on t1.aid=t2.aid WHERE t2.aid=$value[aid]"); $nex_ = DB::fetch($query);echo $nex_['commentnum'];}</dd>
+                                        <dd>时间：$value[dateline]</dd>
+                                        <div class="clear"></div>
+                                    </dl>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    	<!--{/if}-->
+                    </li>
+                    	
+                    <!--{/loop}-->
+                </ul>
+            </div>
+            <div class="clear"></div>
+            <!--{ad/articlelist/mbm hm/3}--><!--{ad/articlelist/mbm hm/4}-->
+            <!--{if $list['multi']}--><div class="pgs cl" id="nex_page">{$list['multi']}</div><!--{/if}-->
+    
+            <!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+        </div>
+	</div>
+	<div class="sd pph">
+		<!--为什么选择我们-->
+        <div class="nex_focus_on"><!--[diy=nex_focus_on]--><div id="nex_focus_on" class="area"></div><!--[/diy]--></div>
+        <div class="nex_side_bxs">
+        	<!--[diy=nex_side_bxs]--><div id="nex_side_bxs" class="area"></div><!--[/diy]-->
+        </div>
+        <!--下级分类-->	
+        <!--{if $cat[subs]}-->
+        <div class="nex_side_boxs">
+        	<div class="nex_side_bx_top">{lang sub_category}</div>
+            <div class="nex_nextnav">
+                <ul>
+                <!--{eval $i = 1;}-->
+                <!--{loop $cat[subs] $value}-->
+                <!--{if $i != 1}--><!--{/if}--><li><a href="{$portalcategory[$value['catid']]['caturl']}" >$value[catname]</a></li><!--{eval $i--;}-->
+                <!--{/loop}-->
+                <div class="clear"></div>
+                </ul>
+            </div>
+        </div>
+        <!--{/if}-->
+        
+        
+        <!--推荐资讯-->
+        <div class="nex_side_boxs">
+        	<div class="nex_side_bx_top">推荐资讯<a href="#" target="_blank">...</a><div class="clear"></div></div>
+        	<div class="nex_tuijian">
+            	<div class="nex_focusBox">
+                	<!--[diy=nex_focusBox]--><div id="nex_focusBox" class="area"></div><!--[/diy]-->
+                	
+                    <ul class="hd">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            
+                <script type="text/javascript">
+                    jQuery(".nex_focusBox").slide({ mainCell:".bd",effect:"left", autoPlay:true, delayTime:300});
+                </script>
+            </div>
+        </div>
+        <!--家装百科-->
+        <div class="nex_side_boxs">
+        	<div class="nex_side_bx_top">家装百科<a href="#" target="_blank">...</a><div class="clear"></div></div>
+            <div class="nex_readings">
+            	<ul>
+                	<!--[diy=nex_readings]--><div id="nex_readings" class="area"></div><!--[/diy]-->
+                	
+                </ul>
+            </div>
+        </div>
+        <!--热门阅读-->
+        <div class="nex_side_boxs">
+        	<div class="nex_side_bx_top">热门阅读<a href="#" target="_blank">...</a><div class="clear"></div></div>
+        	<div class="nex_pivlists">
+            	<ul>
+                	<!--[diy=nex_pivlists]--><div id="nex_pivlists" class="area"></div><!--[/diy]-->
+                </ul>
+            </div>
+            <script type="text/javascript">
+				jQuery(".nex_pivlists ul li").each(function(s){
+					jQuery(this).hover(function(){
+						jQuery(this).addClass("on").siblings().removeClass("on");
+						})
+					})
+			</script>
+        </div>
+        
+        <!--装修攻略-->
+        <div class="nex_side_boxs">
+        	<div class="nex_side_bx_top">装修攻略<a href="#" target="_blank">...</a><div class="clear"></div></div>
+            <div class="nex_selcases">
+            	<ul>
+                	<!--[diy=nex_selcases]--><div id="nex_selcases" class="area"></div><!--[/diy]-->
+                	<div class="clear"></div>
+                </ul>
+            </div>
+            
+        </div>
+        <!--广告位-->
+        <div class="nex_portal_ads">
+        	<!--[diy=nex_portal_ads]--><div id="nex_portal_ads" class="area"></div><!--[/diy]-->
+        	  	
+        </div>
+	</div>
+</div>
+<div class="wp mtn">
+	<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+
+<!--{template common/footer}-->

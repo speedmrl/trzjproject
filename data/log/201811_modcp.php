@@ -1,0 +1,4 @@
+<?PHP exit;?>	1542872325	speedgodcsrj	1	111.50.77.104	login	post		GET={mod=modcp; action=login; op=post; searchsubmit=1; do=search; users=幼乐善馁hp; }; POST={};
+<?PHP exit;?>	1542872337	speedgodcsrj	1	111.50.77.104	thread	post		GET={mod=modcp; action=thread; op=post; searchsubmit=1; do=search; users=幼乐善馁hp; }; POST={};
+<?PHP exit;?>	1542872364	speedgodcsrj	1	111.50.77.104	thread	post		GET={mod=modcp; action=thread; op=post; do=delete; delete={0=233; 1=232; 2=220; 3=209; 4=208; 5=192; 6=186; 7=184; }; chkall=on; deletesubmit=true; nocredit=1; }; POST={do=delete; delete={0=233; 1=232; 2=220; 3=209; 4=208; 5=192; 6=186; 7=184; }; chkall=on; deletesubmit=true; nocredit=1; };
+<?PHP exit;?>	1542872366	speedgodcsrj	1	111.50.77.104	thread	post		GET={mod=modcp; action=thread; op=post; do=search; users=幼乐善馁hp; starttime=2018-09-23; endtime=2018-11-22; searchsubmit=true; }; POST={do=search; users=幼乐善馁hp; starttime=2018-09-23; endtime=2018-11-22; searchsubmit=true; };
